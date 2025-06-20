@@ -14,7 +14,7 @@
           {{ tab.label }}
         </button>
       </div>
-      <router-link to="/issue/new" class="bg-green-600 text-white px-4 py-1 rounded"
+      <router-link to="/issues/new" class="bg-green-600 text-white px-4 py-1 rounded"
         >새 이슈 생성</router-link
       >
     </div>
@@ -72,7 +72,7 @@ const fetchIssues = async (status) => {
   }
 }
 
-const goToDetail = (id) => router.push(`/issue/${id}`)
+const goToDetail = (id) => router.push(`/issues/${id}`)
 const formatDate = (d) => new Date(d).toLocaleString()
 
 fetchIssues()

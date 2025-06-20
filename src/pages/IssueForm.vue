@@ -1,15 +1,16 @@
 <template>
-  <div>
-    <p>이슈 생성/상세/수정 페이지입니다.</p>
-  </div>
+  <div>{{ id }}</div>
 </template>
 
-<script>
+<script setup>
 /*
-  TODO: 이 컴포넌트를 재사용 가능하게 설계해보세요.
-  - 같은 폼 구조와 로직을 재사용하여 코드 중복을 방지하세요.
+TODO: 이 컴포넌트를 재사용 가능하게 설계해보세요.
+- 같은 폼 구조와 로직을 재사용하여 코드 중복을 방지하세요.
 */
-export default {
-  name: 'IssueForm',
-}
+import { ref, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+
+const router = useRouter()
+const route = useRoute()
+const id = route.params.id
 </script>
